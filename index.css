@@ -102,6 +102,12 @@
     cursor: pointer;
 }
 
+.boton:active{
+    transform: scale(0.975);
+    transition: 400ms;
+
+}
+
 .tarjetas{
     display: flex;
     align-items: center;

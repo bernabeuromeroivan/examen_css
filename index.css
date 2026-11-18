@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    width: 1300px;
+    background-color: black;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.lista{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.lista li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: purple;
+}
+
+.lista li a{
+    text-decoration: none;
+    color: white;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    padding-top: 100px;
+    width: 600px;
+}
+
+.medio{
+    display: flex;
+    align-items: center;
+}
+
+.medio img{
+    width: 300px;
+    transform: rotate(10deg);
+    margin-left: 100px;
+}
+
+.estudio{
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: purple;
+}
+
+.titulo{
+    font-size: 40px;
+    color: white;
+    width: 250px;
+}
+
+.span1{
+    font-size: 20px;
+    color: grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.boton{
+    width: 200px;
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    transition: 400ms;
+}
+
+.boton:hover{
+    background-color: darkorchid;
+    transform: scale(1.1);
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.tarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 30px;
+}
+
+.tarjeta{
+    background-color: blueviolet;
+    height: 300px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.tarjeta:hover{
+    transition: 2s;
+    transform: translateY(-10px);
+}
+
+.tarjeta img:hover{
+    animation: escalar 1s infinite;
+}
+
+@keyframes escalar{
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.tarjeta img{
+    height: 200px;
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+.tarjeta h2{
+    padding: 20px;
+    color: white;
+}
+
+.tarjeta span{
+    padding: 20px;
+    color: white;
+}
+
+footer{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+footer span a{
+    text-decoration: none;
+    color: white;
+}

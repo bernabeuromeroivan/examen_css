@@ -6,16 +6,16 @@
 
 .container{
     display: flex;
-    justify-self: center;
+    justify-content: center;
     flex-direction: column;
-    background-color: black;
+    align-items: center;
+    background-color: #0d1020;
 }
 
 .menu{
     display: flex;
-    align-items: center;
     width: 1300px;
-    background-color: black;
+    background-color: #0d1020;
     justify-content: space-between;
     padding: 30px;
     color: white;
@@ -32,7 +32,7 @@
 .lista li a:hover{
     text-decoration: underline;
     cursor: pointer;
-    color: purple;
+    color: #9465ff;
 }
 
 .lista li a{
@@ -44,7 +44,7 @@
 .texto{
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding-bottom: 100px;
     padding-top: 100px;
     width: 600px;
 }
@@ -56,14 +56,25 @@
 
 .medio img{
     width: 300px;
-    transform: rotate(10deg);
     margin-left: 100px;
+    animation: desplazar 2s infinite linear;
+}
+
+@keyframes desplazar {
+    0% {
+        transform: translateY(-10px) rotate(10deg);
+        transition: 200ms;
+    }
+
+    100%{
+        transform: translateY(10px) rotate(10deg);
+    }
 }
 
 .estudio{
     font-size: 20px;
     padding-bottom: 30px;
-    color: purple;
+    color: #9465ff;
 }
 
 .titulo{
@@ -82,7 +93,7 @@
 .boton{
     width: 200px;
     padding: 10px;
-    background-color: blueviolet;
+    background-color: #9465ff;
     border-radius: 12px;
     border: none;
     color: white;
@@ -116,20 +127,68 @@
     gap: 30px;
 }
 
-.tarjeta{
-    background-color: blue;
+.tarjeta1{
+    background-color: #191d31;
     height: 300px;
     border-radius: 12px;
     cursor: pointer;
     transition: 1s;
+    opacity: 0;
 }
 
-.tarjeta:hover{
+.tarjeta2{
+    background-color: #191d31;
+    height: 300px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+}
+
+.tarjeta3{
+    background-color: #191d31;
+    height: 300px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+}
+
+.aparece {
+    opacity: 0;
+    animation: mostrar 1s ease-in-out forwards;
+}
+
+.tarjeta1 {
+    animation-delay: 0.2s;
+}
+
+.tarjeta2 {
+    animation-delay: 0.4s;
+}
+
+.tarjeta3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes mostrar {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-10);
+    }
+}
+
+.aparece:hover{
     transition: 1s;
     transform: translateY(-10px);
+    box-shadow: 10px 10px 10px red;
 }
 
-.tarjeta img:hover{
+.aparece img:hover{
     animation: escalar 1s;
 }
 
@@ -139,7 +198,21 @@
     }
 }
 
-.tarjeta img{
+.titulo_abajo{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 50px;
+    justify-content: space-between;
+    gap: 400px;
+}
+
+.ideas{
+    width: 100%;
+} 
+
+.aparece img{
     height: 200px;
     padding: 15px;
     transition: 1s;
@@ -147,12 +220,12 @@
     border-radius: 24px;
 }
 
-.tarjeta h2{
+.aparece h2{
     padding: 20px;
     color: white;
 }
 
-.tarjeta span{
+.aparece span{
     padding: 20px;
     color: white;
 }
@@ -160,7 +233,7 @@
 footer{
     display: flex;
     color: white;
-    justify-content: space-between;
+    gap: 600px;
     margin: 40px;
 }
 

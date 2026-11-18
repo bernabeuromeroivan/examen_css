@@ -38,6 +38,7 @@
 .lista li a{
     text-decoration: none;
     color: white;
+    transition: 1s;
 }
 
 .texto{
@@ -66,9 +67,9 @@
 }
 
 .titulo{
-    font-size: 40px;
+    font-size: 60px;
     color: white;
-    width: 250px;
+    width: 500px;
 }
 
 .span1{
@@ -89,6 +90,11 @@
     transition: 400ms;
 }
 
+.boton a{
+    text-decoration: none;
+    color: white;
+}
+
 .boton:hover{
     background-color: darkorchid;
     transform: scale(1.1);
@@ -105,32 +111,34 @@
 }
 
 .tarjeta{
-    background-color: blueviolet;
+    background-color: blue;
     height: 300px;
     border-radius: 12px;
     cursor: pointer;
-    transition: 2s;
+    transition: 1s;
 }
 
 .tarjeta:hover{
-    transition: 2s;
+    transition: 1s;
     transform: translateY(-10px);
 }
 
 .tarjeta img:hover{
-    animation: escalar 1s infinite;
+    animation: escalar 1s;
 }
 
 @keyframes escalar{
     100%{
-        transform: scale(1.1);
+        transform: scale(1.030);
     }
 }
 
 .tarjeta img{
     height: 200px;
     padding: 15px;
+    transition: 1s;
     padding-bottom: 5px;
+    border-radius: 24px;
 }
 
 .tarjeta h2{
@@ -153,4 +161,10 @@ footer{
 footer span a{
     text-decoration: none;
     color: white;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+    color: purple;
+    transition: 1s;
 }
